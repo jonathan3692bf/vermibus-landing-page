@@ -1,0 +1,56 @@
+@tailwind base;
+
+@layer base {
+  @font-face {
+    font-family: 'DIN';
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/DIN-Light.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'DIN';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/DIN-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'DIN';
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/DIN-Medium.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'DIN';
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/DIN-Bold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'DIN';
+    font-weight: 900;
+    font-display: swap;
+    src: url('/fonts/DIN-Black.ttf') format('truetype');
+  }
+  body {
+    font-family: "Din", "Helvetica Neue", sans-serif;
+  }
+  h1 {
+    @apply text-4xl;
+    @apply font-black;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  h4 {
+    @apply text-lg;
+  }
+}
+@tailwind components;
+@tailwind utilities;
