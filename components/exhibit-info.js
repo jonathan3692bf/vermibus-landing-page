@@ -9,28 +9,31 @@ export function ArtworkCard ({
   totalPieces = 0,
   link = ''
 }) {
-  return <div key={`${coordinates.x}-${coordinates.y}`} className="relative">
-    <Image
-      className="absolute z-[-1] rounded"
-      alt={`Artwork in ${location}, piece number ${index + 1}`}
-      src={previewImage.src}
-      quality={90}
-      layout="responsive"
-      width={previewImage.width}
-      height={previewImage.height}
-    />
-    <div className="absolute bottom-0 flex items-center justify-between w-full px-1 sm:p-4">
-      <div className="flex flex-col">
-        <div className="font-bold sm:text-xl">{location} {index + 1}/{totalPieces}</div>
-        <div className="space-x-2 text-[15px] font-light sm:text-[19px]">
-          <span>X: {coordinates.x}</span>
-          <span>Y: {coordinates.y}</span>
+  return <div key={`${coordinates.x}-${coordinates.y}`}>
+    <a href={link} target="_blank" rel="noreferrer">
+      <div className="relative">
+        <Image
+          className="absolute z-[-1] rounded"
+          alt={`Artwork in ${location}, piece number ${index + 1}`}
+          src={previewImage.src}
+          quality={90}
+          layout="responsive"
+          width={previewImage.width}
+          height={previewImage.height}
+        />
+        <div className="absolute bottom-0 flex items-center justify-between w-full px-1 sm:p-4">
+          <div className="flex flex-col">
+            <div className="font-bold sm:text-xl">{location} {index + 1}/{totalPieces}</div>
+            <div className="space-x-2 text-[15px] font-light sm:text-[19px]">
+              <span>X: {coordinates.x}</span>
+              <span>Y: {coordinates.y}</span>
+            </div>
+          </div>
+
+          <Button small>View 360/VR</Button>
         </div>
       </div>
-      <a href={link} target="_blank" rel="noreferrer">
-        <Button small>View 360/VR</Button>
-      </a>
-    </div>
+    </a>
   </div>
 }
 
