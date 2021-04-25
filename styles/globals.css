@@ -35,6 +35,11 @@
     font-display: swap;
     src: url('/fonts/DIN-Black.ttf') format('truetype');
   }
+
+  html {
+    font-size: 16px;
+  }
+  
   body {
     font-family: "Din", "Helvetica Neue", sans-serif;
     background-color: black;

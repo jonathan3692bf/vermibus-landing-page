@@ -99,18 +99,18 @@ export default function HomePage () {
       />
     </div>
     <div className="relative max-w-screen-lg px-4 mx-auto -top-8 sm:-top-16 md:-top-40">
-      <h1 className="mb-2 text-2xl font-bold md:mb-3 md:text-4xl">
+      <h1 className="mb-2 text-[32px] font-black md:mb-3">
         VERMIBUS “IMMERSION”
       </h1>
-      <h2 className="text-sm font-medium leading-tight md:text-lg">
+      <h2 className="text-[20px] font-bold leading-none ">
         An ongoing series of documented urban interventions in which the artist emphasizes the context of his work through fully immersive 360 VR experiences.
       </h2>
     </div>
     <div className="relative max-w-screen-lg px-4 mx-auto md:-top-24">
-      <div className="space-y-4 text-sm font-light sm:text-base">
-        <h2 className="text-lg font-bold md:text-xl">
+      <div className="space-y-4 font-regular">
+        <div className="text-2xl font-black leading-tight">
           The vision
-        </h2>
+        </div>
         <div className="leading-tight">
           By capturing the context of the intervention, Vermibus offers the viewer the opportunity to be part of that moment in space and time. Using the possibilities of 360° audiovisual technology paired with the blockchain, the artist documents his installations and offers them as NFT collections.
         </div>
@@ -119,7 +119,7 @@ export default function HomePage () {
         </div>
       </div>
       {exhibits.map(({ description, dates, location, vrLink, previewImage, artwork }) => {
-        return <div className="py-4" key={location}>
+        return <div key={location} className="pt-6">
           <div className="relative" style={{ background: 'linear-gradient(black, transparent 20% 80%, black)' }}>
             <Image
               priority
@@ -132,23 +132,45 @@ export default function HomePage () {
               height={previewImage.height}
             />
           </div>
-          <div className="flex items-center justify-between mt-4 sm:justify-start sm:space-x-4">
+          <div className="flex items-center justify-between mt-8 sm:justify-start sm:space-x-4">
             <div className="flex flex-col">
-              <div className="text-xl font-bold uppercase">{location}</div>
-              <div className="text-sm font-medium">{dates[0]} - {dates[1]}</div>
+              <div className="text-2xl font-black leading-none uppercase">{location}</div>
+              <div className="text-base font-medium">{dates[0]} - {dates[1]}</div>
             </div>
             <a href={vrLink} target="_blank" rel="noreferrer">
-              <div className="p-[6px] border-2 border-white rounded-full w-10 h-10">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                </svg>
-              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+                <defs>
+                    <filter id="ke4km09n0a" width="134.6%" height="134.6%" x="-17.3%" y="-17.3%" filterUnits="objectBoundingBox">
+                        <feMorphology in="SourceAlpha" operator="dilate" radius="1.5" result="shadowSpreadOuter1"/>
+                        <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+                        <feMorphology in="SourceAlpha" radius="3.5" result="shadowInner"/>
+                        <feOffset in="shadowInner" result="shadowInner"/>
+                        <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+                        <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+                        <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.109948645 0"/>
+                    </filter>
+                    <rect id="xqhua06j5b" width="52" height="52" x="0" y="0" rx="26"/>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                    <g>
+                        <g>
+                            <g transform="translate(-340 -1221) translate(346 1227)">
+                                <use fill="#000" filter="url(#ke4km09n0a)" href="#xqhua06j5b"/>
+                                <rect width="50" height="50" x="1" y="1" stroke="#FFF" strokeLinejoin="square" strokeWidth="2" rx="25"/>
+                            </g>
+                            <g fill="#FFF" fill-rule="nonzero">
+                                <path d="M8.692 0C3.899 0 0 3.9 0 8.692c0 5.948 7.778 14.68 8.11 15.048.31.347.854.346 1.164 0 .331-.368 8.11-9.1 8.11-15.048 0-4.793-3.9-8.692-8.692-8.692zm0 13.065c-2.411 0-4.373-1.962-4.373-4.373 0-2.411 1.962-4.373 4.373-4.373 2.411 0 4.373 1.962 4.373 4.373 0 2.411-1.962 4.373-4.373 4.373z" transform="translate(-340 -1221) translate(346 1227) translate(17 14)"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+              </svg>
             </a>
           </div>
-          <div className="py-2 text-sm font-light leading-tight sm:text-base">
+          <div className="py-2">
             <div className="leading-tight">{description}</div>
           </div>
-          <div className="grid gap-8 py-4 md:grid-cols-2 sm:py-8">
+          <div className="grid gap-8 pt-6 md:grid-cols-2">
             {artwork.map(({ coordinates, link, previewImage }, index) => {
               return <div key={`${coordinates.x}-${coordinates.y}`} className="relative">
                 <Image
@@ -160,10 +182,10 @@ export default function HomePage () {
                   width={previewImage.width}
                   height={previewImage.height}
                 />
-                <div className="absolute bottom-0 flex items-center justify-between w-full px-2 sm:px-4">
+                <div className="absolute bottom-0 flex items-center justify-between w-full px-1 sm:px-4">
                   <div className="flex flex-col">
-                    <div className="text-sm font-bold uppercase">{location} {index + 1} / {artwork.length}</div>
-                    <div className="space-x-2 text-xs font-thin">
+                    <div className="font-black uppercase">{location} {index + 1}/{artwork.length}</div>
+                    <div className="space-x-2 text-[15px] font-light">
                       <span>X: {coordinates.x}</span>
                       <span>Y: {coordinates.y}</span>
                     </div>
@@ -177,8 +199,8 @@ export default function HomePage () {
           </div>
         </div>
       })}
-      <div className="flex flex-col items-center space-y-4">
-        <div className="space-y-4 text-sm font-light sm:text-base">
+      <div className="flex flex-col items-center pt-8 space-y-4">
+        <div className="space-y-4">
           <div className="leading-tight">
             With the purchase of these NFTs, you’re acquiring not only the original high-resolution digital artwork files, but an indelible signature of the artist and all transactions associated with the artwork in the form of a smart contract that lives on the Ethereum blockchain — which translates into digital proof of authenticity and uniqueness.
           </div>
@@ -186,11 +208,11 @@ export default function HomePage () {
             Additionally, you also support the artist and contribute to his efforts to make urban space interventions accessible to the world, while also becoming a patron for digital street art preservation. Your profile name and wallet address will be featured under the public version of the artwork accordingly.
           </div>
         </div>
-        <a className="w-max" href={collectionLink} target="_blank" rel="noreferrer">
+        <a className="w-full sm:w-max" href={collectionLink} target="_blank" rel="noreferrer">
           <Button large>BUY COLLECTION ON OPENSEA</Button>
         </a>
       </div>
-      <div className="py-8 space-y-8">
+      <div className="py-10 space-y-8">
         {[1, 2, 3, 4].map(item => {
           return <div key={item} className="w-full" style={{ background: 'linear-gradient(black, transparent 20% 80%, black)' }}>
             <Image
@@ -205,7 +227,7 @@ export default function HomePage () {
           </div>
         })}
       </div>
-      <div className="text-xl font-bold sm:text-2xl">
+      <div className="text-2xl font-bold sm:text-2xl">
         About Vermibus
       </div>
       <div className="flex flex-col flex-wrap py-4 sm:flex-row">
@@ -235,7 +257,7 @@ export default function HomePage () {
             </div>
 
         </div>
-        <div className="order-1 w-full pb-4 space-y-4 text-sm font-thin sm:pb-0 sm:w-1/2 sm:text-base sm:order-2 sm:pl-4">
+        <div className="order-1 w-full pb-4 space-y-4 sm:pb-0 sm:w-1/2 sm:text-base sm:order-2 sm:pl-4">
           <div className="leading-tight">
             The Berlin-based artist and activist Vermibus has developed a unique practice centered around the critique of contemporary beauty standards. He comments on the attempts of advertisement and consumer society in general that aim to take away individual identities only to replace them with those of a certain brand.
           </div>
