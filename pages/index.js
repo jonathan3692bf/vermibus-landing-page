@@ -268,8 +268,8 @@ export default function HomePage () {
                 src={imgSrc}
                 quality={100}
                 layout="intrinsic"
-                width={100}
-                height={100}
+                width={60}
+                height={60}
               />
             </a>
           </div>
