@@ -86,6 +86,7 @@ export default function HomePage () {
       }}
     >
       <Image
+        priority
         className="absolute z-[-1]"
         alt="VR headset recommended"
         src="/images/vr_headset.jpg"
@@ -121,6 +122,7 @@ export default function HomePage () {
         return <div className="py-4" key={location}>
           <div className="relative" style={{ background: 'linear-gradient(black, transparent 20% 80%, black)' }}>
             <Image
+              priority
               className="absolute z-[-1]"
               alt={`Artwork in ${location}`}
               src={previewImage.src}
@@ -175,7 +177,7 @@ export default function HomePage () {
           </div>
         </div>
       })}
-      <div className="flex flex-col items-center space-y-4 md:items-start">
+      <div className="flex flex-col items-center space-y-4">
         <div className="space-y-4 text-sm font-light sm:text-base">
           <div className="leading-tight">
             With the purchase of these NFTs, you’re acquiring not only the original high-resolution digital artwork files, but an indelible signature of the artist and all transactions associated with the artwork in the form of a smart contract that lives on the Ethereum blockchain — which translates into digital proof of authenticity and uniqueness.
