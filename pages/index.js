@@ -1,77 +1,11 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import Button from '../components/button'
-
-const collectionLink = 'https://opensea.io/collection/vermibus-immersion'
-const exhibits = [
-  {
-    location: 'U Schloßstraße',
-    description: 'In the first collection, the artist presents a series of four interventions installed in Berlin’s futuristic brutalist subway station U-Bhf. Schloßstraße, which were displayed for five days before being replaced by the OoH advertising company.',
-    dates: ['2021-04-01', '2021-04-06'],
-    vrLink: 'https://tour-de.metareal.com/apps/player?asset=c6f3dd0f-3fe5-439b-a514-4ff2e2bb97e9',
-    previewImage: {
-      src: '/images/card_4_setting.jpg',
-      width: 5905,
-      height: 3937
-    },
-    artwork: [
-      {
-        coordinates: { x: 52.46146778, y: 13.32513895 },
-        link: 'https://www.youtube.com/watch?v=e4-RGKhCG3s',
-        previewImage: {
-          src: '/images/cards/1.png',
-          width: 1488,
-          height: 879
-        }
-      },
-      {
-        coordinates: { x: 52.46140147, y: 13.32517213 },
-        link: 'https://www.youtube.com/watch?v=FgUcRVH8NHU',
-        previewImage: {
-          src: '/images/cards/2.png',
-          width: 1488,
-          height: 879
-        }
-      },
-      {
-        coordinates: { x: 52.46146778, y: 13.32513896 },
-        link: 'https://www.youtube.com/watch?v=hKy2Gm2lRtM',
-        previewImage: {
-          src: '/images/cards/3.png',
-          width: 1488,
-          height: 879
-        }
-      },
-      {
-        coordinates: { x: 52.46144351, y: 13.32514750 },
-        link: 'https://www.youtube.com/watch?v=pjBkpsBFr_E',
-        previewImage: {
-          src: '/images/cards/4.png',
-          width: 1488,
-          height: 879
-        }
-      }
-    ]
-  }
-]
-
-const communicationChannels = [
-  {
-    name: 'email',
-    imgSrc: '/images/email.png',
-    href: 'http://tinyurl.com/4kw9rakp'
-  },
-  {
-    name: 'twitter',
-    imgSrc: '/images/twitter.png',
-    href: 'https://twitter.com/vermibus'
-  },
-  {
-    name: 'instagram',
-    imgSrc: '/images/instagram.png',
-    href: 'https://www.instagram.com/vermibus/'
-  }
-]
+import {
+  collectionLink,
+  exhibits,
+  communicationChannels
+} from '../lib/data'
 
 export default function HomePage () {
   return <div className="">
@@ -82,7 +16,7 @@ export default function HomePage () {
   <main>
     <div className="relative max-w-screen-xl mx-auto mt-2"
       style={{
-        background: 'radial-gradient(closest-side, transparent 75%, black)'
+        background: 'linear-gradient(black, transparent 20% 80%, black), linear-gradient(to right, black, transparent 20% 80%, black)'
       }}
     >
       <Image
@@ -91,8 +25,6 @@ export default function HomePage () {
         alt="VR headset recommended"
         src="/images/vr_headset.jpg"
         quality={80}
-        // layout="fill"
-        // objectFit="none"
         layout="responsive"
         width={4935}
         height={3290}
@@ -115,7 +47,7 @@ export default function HomePage () {
           By capturing the context of the intervention, Vermibus offers the viewer the opportunity to be part of that moment in space and time. Using the possibilities of 360° audiovisual technology paired with the blockchain, the artist documents his installations and offers them as NFT collections.
         </div>
         <div className="leading-tight">
-          In collaboration with Experience Designer <a href="https://juancacardell.com" className="text-[#fdefa6] font-medium">Juanca Cardell</a>, this project has been conceptualized and developed to challenge the ephemerality of conventional urban interventions, allowing the viewer to experience Vermibus’ installations long after they are gone. This project represents an innovative attempt to solve one of the biggest problems when exhibiting street art - the lack of its original context.
+          In collaboration with Experience Designer <a href="https://juancacardell.com" className="text-[#fdefa6] font-bold">Juanca Cardell</a>, this project has been conceptualized and developed to challenge the ephemerality of conventional urban interventions, allowing the viewer to experience Vermibus’ installations long after they are gone. This project represents an innovative attempt to solve one of the biggest problems when exhibiting street art - the lack of its original context.
         </div>
       </div>
       {exhibits.map(({ description, dates, location, vrLink, previewImage, artwork }) => {
@@ -238,7 +170,7 @@ export default function HomePage () {
               className="absolute z-[-1] rounded"
               alt="Vermibus"
               src={'/images/vermibus.jpg'}
-              quality={100}
+              quality={90}
               layout="responsive"
               width={800}
               height={1200}
@@ -292,7 +224,6 @@ export default function HomePage () {
               <Image
                 alt={name}
                 src={imgSrc}
-                quality={100}
                 layout="intrinsic"
                 width={60}
                 height={60}
@@ -301,9 +232,9 @@ export default function HomePage () {
           </div>
         })}
       </div>
-      <div className="py-8 font-light text-center">
-        © VERMIBUS, 2021
-      </div>
+    </div>
+    <div className="py-4 font-light text-center">
+      © VERMIBUS, 2021
     </div>
   </main>
 </div>
