@@ -106,14 +106,14 @@ export default function HomePage () {
       </h2>
     </div>
     <div className="relative max-w-screen-lg px-4 mx-auto md:-top-24">
-      <div className="space-y-4 text-sm font-light leading-tight">
+      <div className="space-y-4 text-sm font-light sm:text-base">
         <h2 className="text-lg font-bold md:text-xl">
           The vision
         </h2>
-        <div>
+        <div className="leading-tight">
           By capturing the context of the intervention, Vermibus offers the viewer the opportunity to be part of that moment in space and time. Using the possibilities of 360° audiovisual technology paired with the blockchain, the artist documents his installations and offers them as NFT collections.
         </div>
-        <div>
+        <div className="leading-tight">
           In collaboration with Experience Designer <a href="https://juancacardell.com" className="text-[#fdefa6] font-normal">Juanca Cardell</a>, this project has been conceptualized and developed to challenge the ephemerality of conventional urban interventions, allowing the viewer to experience Vermibus’ installations long after they are gone. This project represents an innovative attempt to solve one of the biggest problems when exhibiting street art - the lack of its original context.
         </div>
       </div>
@@ -143,10 +143,10 @@ export default function HomePage () {
               </div>
             </a>
           </div>
-          <div className="py-2 text-sm font-light leading-tight">
-            {description}
+          <div className="py-2 text-sm font-light leading-tight sm:text-base">
+            <div className="leading-tight">{description}</div>
           </div>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 py-4 md:grid-cols-2 sm:py-8">
             {artwork.map(({ coordinates, link, previewImage }, index) => {
               return <div key={`${coordinates.x}-${coordinates.y}`} className="relative">
                 <Image
@@ -176,11 +176,11 @@ export default function HomePage () {
         </div>
       })}
       <div className="flex flex-col items-center space-y-4 md:items-start">
-        <div className="space-y-4 text-sm font-light leading-tight">
-          <div>
+        <div className="space-y-4 text-sm font-light sm:text-base">
+          <div className="leading-tight">
             With the purchase of these NFTs, you’re acquiring not only the original high-resolution digital artwork files, but an indelible signature of the artist and all transactions associated with the artwork in the form of a smart contract that lives on the Ethereum blockchain — which translates into digital proof of authenticity and uniqueness.
           </div>
-          <div>
+          <div className="leading-tight">
             Additionally, you also support the artist and contribute to his efforts to make urban space interventions accessible to the world, while also becoming a patron for digital street art preservation. Your profile name and wallet address will be featured under the public version of the artwork accordingly.
           </div>
         </div>
@@ -206,7 +206,7 @@ export default function HomePage () {
       <div className="text-xl font-bold sm:text-2xl">
         About Vermibus
       </div>
-      <div className="flex flex-col flex-wrap py-8 sm:flex-row">
+      <div className="flex flex-col flex-wrap py-4 sm:flex-row">
          <div className="order-2 w-full space-y-4 sm:w-1/2 sm:order-1" style={{ background: 'linear-gradient(black, transparent 20% 80%, black)' }}>
             <Image
               className="absolute z-[-1] rounded"
@@ -233,7 +233,7 @@ export default function HomePage () {
             </div>
 
         </div>
-        <div className="order-1 w-full space-y-4 text-sm font-thin sm:w-1/2 sm:text-base sm:order-2 sm:pl-4">
+        <div className="order-1 w-full pb-4 space-y-4 text-sm font-thin sm:pb-0 sm:w-1/2 sm:text-base sm:order-2 sm:pl-4">
           <div className="leading-tight">
             The Berlin-based artist and activist Vermibus has developed a unique practice centered around the critique of contemporary beauty standards. He comments on the attempts of advertisement and consumer society in general that aim to take away individual identities only to replace them with those of a certain brand.
           </div>
