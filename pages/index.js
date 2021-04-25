@@ -82,7 +82,7 @@ export default function HomePage () {
         <div className="py-8 text-2xl font-black sm:text-3xl sm:py-10">
           About Vermibus
         </div>
-        <div className="flex flex-col flex-wrap py-8 sm:flex-row">
+        <div className="flex flex-col flex-wrap py-4 sm:flex-row sm:py-8">
           <div className="order-2 w-full space-y-8 sm:w-1/2 sm:order-1">
             <div style={{ background: 'linear-gradient(#101010, transparent 20% 80%, #101010)' }}>
               <Image
@@ -110,7 +110,7 @@ export default function HomePage () {
               </a>
             </div>
           </div>
-          <div className="order-1 w-full pb-4 space-y-8 leading-tight sm:space-y-10 sm:pb-0 sm:w-1/2 sm:order-2 sm:pl-8">
+          <div className="order-1 w-full space-y-8 leading-tight sm:space-y-10 sm:w-1/2 sm:order-2 sm:pl-8">
             <div className="">
               The Berlin-based artist and activist Vermibus has developed a unique practice centered around the critique of contemporary beauty standards. He comments on the attempts of advertisement and consumer society in general that aim to take away individual identities only to replace them with those of a certain brand.
             </div>
@@ -139,10 +139,12 @@ export default function HomePage () {
           </div>
         </div>
       </div>
-      <CommunicationChannels />
     </div>
-    <div className="py-4 font-light text-center">
-      © VERMIBUS, 2021
+    <div className="py-8 space-y-4">
+      <CommunicationChannels />
+      <div className="font-light text-center">
+        © VERMIBUS, 2021
+      </div>
     </div>
   </main>
 </div>
