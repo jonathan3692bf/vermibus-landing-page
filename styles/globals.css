@@ -5,35 +5,35 @@
     font-family: 'DIN';
     font-weight: 300;
     font-display: swap;
-    src: url('/fonts/DIN-Light.ttf') format('truetype');
+    src: url('/fonts/DIN-Light.otf') format('opentype');
   }
 
   @font-face {
     font-family: 'DIN';
     font-weight: 400;
     font-display: swap;
-    src: url('/fonts/DIN-Regular.ttf') format('truetype');
+    src: url('/fonts/DIN-Regular.otf') format('opentype');
   }
 
   @font-face {
     font-family: 'DIN';
     font-weight: 500;
     font-display: swap;
-    src: url('/fonts/DIN-Medium.ttf') format('truetype');
+    src: url('/fonts/DIN-Medium.otf') format('opentype');
   }
   
   @font-face {
     font-family: 'DIN';
     font-weight: 700;
     font-display: swap;
-    src: url('/fonts/DIN-Bold.ttf') format('truetype');
+    src: url('/fonts/DIN-Bold.otf') format('opentype');
   }
   
   @font-face {
     font-family: 'DIN';
     font-weight: 900;
     font-display: swap;
-    src: url('/fonts/DIN-Black.ttf') format('truetype');
+    src: url('/fonts/DIN-Black.otf') format('opentype');
   }
 
   html {
@@ -42,7 +42,7 @@
   
   body {
     font-family: "Din", "Helvetica Neue", sans-serif;
-    background-color: black;
+    background-color: #101010;
     color: white;
   }
   h1 {

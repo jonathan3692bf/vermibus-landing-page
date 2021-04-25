@@ -16,7 +16,7 @@ export default function HomePage () {
   <main>
     <div className="relative max-w-screen-xl mx-auto mt-2"
       style={{
-        background: 'linear-gradient(black, transparent 20% 80%, black), linear-gradient(to right, black, transparent 20% 80%, black)'
+        background: 'linear-gradient(#101010, transparent 20% 80%, #101010), linear-gradient(to right, #101010, transparent 20% 80%, #101010)'
       }}
     >
       <Image
@@ -47,12 +47,12 @@ export default function HomePage () {
           By capturing the context of the intervention, Vermibus offers the viewer the opportunity to be part of that moment in space and time. Using the possibilities of 360° audiovisual technology paired with the blockchain, the artist documents his installations and offers them as NFT collections.
         </div>
         <div className="leading-tight">
-          In collaboration with Experience Designer <a href="https://juancacardell.com" className="text-[#fdefa6] font-bold">Juanca Cardell</a>, this project has been conceptualized and developed to challenge the ephemerality of conventional urban interventions, allowing the viewer to experience Vermibus’ installations long after they are gone. This project represents an innovative attempt to solve one of the biggest problems when exhibiting street art - the lack of its original context.
+          In collaboration with Experience Designer <a href="https://www.linkedin.com/in/juancacardell/" className="text-[#fdefa6] font-bold" target="_blank" rel="noreferrer">Juanca Cardell</a>, this project has been conceptualized and developed to challenge the ephemerality of conventional urban interventions, allowing the viewer to experience Vermibus’ installations long after they are gone. This project represents an innovative attempt to solve one of the biggest problems when exhibiting street art - the lack of its original context.
         </div>
       </div>
       {exhibits.map(({ description, dates, location, vrLink, previewImage, artwork }) => {
         return <div key={location} className="pt-6">
-          <div className="relative" style={{ background: 'linear-gradient(black, transparent 20% 80%, black)' }}>
+          <div className="relative" style={{ background: 'linear-gradient(#101010, transparent 20% 80%, #101010)' }}>
             <Image
               priority
               className="absolute z-[-1]"
@@ -64,10 +64,10 @@ export default function HomePage () {
               height={previewImage.height}
             />
           </div>
-          <div className="flex items-center justify-between mt-8 sm:justify-start sm:space-x-8">
+          <div className="flex items-center justify-between mt-16 sm:justify-start sm:space-x-8">
             <div className="flex flex-col">
-              <div className="text-2xl font-black leading-none uppercase sm:text-3xl">{location}</div>
-              <div className="text-base font-medium sm:text-xl">{dates[0]} - {dates[1]}</div>
+              <div className="text-2xl font-black leading-none sm:text-3xl">{location}</div>
+              <div className="text-base font-bold sm:text-xl">{dates[0]} - {dates[1]}</div>
             </div>
             <div className="w-16">
               <a href={vrLink} target="_blank" rel="noreferrer">
@@ -118,7 +118,7 @@ export default function HomePage () {
                 />
                 <div className="absolute bottom-0 flex items-center justify-between w-full px-1 sm:px-4">
                   <div className="flex flex-col">
-                    <div className="font-black uppercase sm:text-xl">{location} {index + 1}/{artwork.length}</div>
+                    <div className="font-bold sm:text-xl">{location} {index + 1}/{artwork.length}</div>
                     <div className="space-x-2 text-[15px] font-light sm:text-[19px]">
                       <span>X: {coordinates.x}</span>
                       <span>Y: {coordinates.y}</span>
@@ -133,7 +133,7 @@ export default function HomePage () {
           </div>
         </div>
       })}
-      <div className="flex flex-col items-center pt-8 space-y-4">
+      <div className="flex flex-col items-center py-8 space-y-4">
         <div className="space-y-4 font-light sm:text-xl ">
           <div className="leading-tight">
             With the purchase of these NFTs, you’re acquiring not only the original high-resolution digital artwork files, but an indelible signature of the artist and all transactions associated with the artwork in the form of a smart contract that lives on the Ethereum blockchain — which translates into digital proof of authenticity and uniqueness.
@@ -146,9 +146,9 @@ export default function HomePage () {
           <Button large>BUY COLLECTION ON OPENSEA</Button>
         </a>
       </div>
-      <div className="py-10 space-y-8">
+      <div className="py-12 space-y-8">
         {[1, 2, 3, 4].map(item => {
-          return <div key={item} className="w-full" style={{ background: 'linear-gradient(black, transparent 20% 80%, black)' }}>
+          return <div key={item} className="w-full" style={{ background: 'linear-gradient(#101010, transparent 20% 80%, #101010)' }}>
             <Image
               className="absolute z-[-1] rounded"
               alt={`Example artwork - ${item}`}
@@ -164,8 +164,9 @@ export default function HomePage () {
       <div className="text-2xl font-bold sm:text-3xl">
         About Vermibus
       </div>
-      <div className="flex flex-col flex-wrap py-4 sm:flex-row">
-         <div className="order-2 w-full space-y-4 sm:w-1/2 sm:order-1" style={{ background: 'linear-gradient(black, transparent 20% 80%, black)' }}>
+      <div className="flex flex-col flex-wrap py-8 sm:flex-row">
+        <div className="order-2 w-full space-y-4 sm:w-1/2 sm:order-1">
+          <div style={{ background: 'linear-gradient(#101010, transparent 20% 80%, #101010)' }}>
             <Image
               className="absolute z-[-1] rounded"
               alt="Vermibus"
@@ -175,23 +176,23 @@ export default function HomePage () {
               width={800}
               height={1200}
             />
-            <div className="md:hidden">
-              <a className="w-max" href="https://vermibus.com/" target="_blank" rel="noreferrer">
-                <Button large>
-                  Learn More
-                </Button>
-              </a>
-            </div>
-            <div className="md:hidden">
-              <a className="w-max" href="https://vermibus.com/" target="_blank" rel="noreferrer">
-                <Button large>
-                  Download the press kit
-                </Button>
-              </a>
-            </div>
-
+          </div>
+          <div className="md:hidden">
+            <a className="w-max" href="https://vermibus.com/" target="_blank" rel="noreferrer">
+              <Button large>
+                Learn More
+              </Button>
+            </a>
+          </div>
+          <div className="md:hidden">
+            <a className="w-max" href="https://vermibus.com/" target="_blank" rel="noreferrer">
+              <Button large>
+                Download the press kit
+              </Button>
+            </a>
+          </div>
         </div>
-        <div className="order-1 w-full pb-4 space-y-4 font-light sm:pb-0 sm:w-1/2 sm:text-xl sm:order-2 sm:pl-4">
+        <div className="order-1 w-full pb-4 space-y-4 font-light sm:pb-0 sm:w-1/2 sm:text-xl sm:order-2 sm:pl-8">
           <div className="leading-tight">
             The Berlin-based artist and activist Vermibus has developed a unique practice centered around the critique of contemporary beauty standards. He comments on the attempts of advertisement and consumer society in general that aim to take away individual identities only to replace them with those of a certain brand.
           </div>
