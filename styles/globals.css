@@ -37,10 +37,11 @@
   }
   body {
     font-family: "Din", "Helvetica Neue", sans-serif;
+    background-color: black;
+    color: white;
   }
   h1 {
     @apply text-4xl;
-    @apply font-black;
   }
   h2 {
     @apply text-2xl;
