@@ -35,19 +35,33 @@ export default function HomePage () {
         An ongoing series of documented urban interventions in which the artist emphasizes the context of his work through fully immersive 360 VR experiences.
       </h2>
     </div>
-    <div className="relative max-w-screen-lg px-4 mx-auto font-light sm:text-xl md:-top-24">
-      <div className="pb-8 space-y-8 leading-tight sm:space-y-10">
-        <div className="text-2xl font-black sm:text-3xl">
+    <div className="relative max-w-screen-lg px-4 mx-auto space-y-16 font-light sm:text-xl -top-8 sm:-top-16 md:-top-40">
+      <div className="pt-16">
+        <div className="pb-4 text-2xl font-black sm:text-3xl">
           The vision
         </div>
-        <div className="">
-          By capturing the context of the intervention, <a className="text-[#fdefa6] font-bold" href="https://vermibus.com/" target="_blank" rel="noreferrer">Vermibus</a> offers the viewer the opportunity to be part of that moment in space and time. Using the possibilities of 360° audiovisual technology paired with the blockchain, the artist documents his installations and offers them as NFT collections.
-        </div>
-        <div className="">
-          In collaboration with Experience Designer <a href="https://www.linkedin.com/in/juancacardell/" className="text-[#fdefa6] font-bold" target="_blank" rel="noreferrer">Juanca Cardell</a>, this project has been conceptualized and developed to challenge the ephemerality of conventional urban interventions, allowing the viewer to experience Vermibus’ installations long after they are gone. This project represents an innovative attempt to solve one of the biggest problems when exhibiting street art - the lack of its original context.
+        <div className="space-y-8 leading-tight">
+          <div>
+            By capturing the context of the intervention, <a className="text-[#fdefa6] font-bold" href="https://vermibus.com/" target="_blank" rel="noreferrer">Vermibus</a> offers the viewer the opportunity to be part of that moment in space and time. Using the possibilities of 360° audiovisual technology paired with the blockchain, the artist documents his installations and offers them as NFT collections.
+          </div>
+          <div >
+            In collaboration with Experience Designer <a href="https://www.linkedin.com/in/juancacardell/" className="text-[#fdefa6] font-bold" target="_blank" rel="noreferrer">Juanca Cardell</a>, this project has been conceptualized and developed to challenge the ephemerality of conventional urban interventions, allowing the viewer to experience Vermibus’ installations long after they are gone. This project represents an innovative attempt to solve one of the biggest problems when exhibiting street art - the lack of its original context.
+          </div>
+          <div className="relative" style={{ background: 'linear-gradient(#101010, transparent 20% 80%, #101010)' }}>
+            <Image
+              priority
+              className="absolute z-[-1]"
+              alt='People walking by artwork'
+              src='/images/card_4_setting.jpg'
+              quality={90}
+              layout="responsive"
+              width={5905}
+              height={3937}
+            />
+          </div>
         </div>
       </div>
-      <div className="py-16 space-y-8 sm:space-y-10">
+      <div className="space-y-8">
         {exhibits.map((exhibit, index) => {
           return <ExhibitInfo key={index} {...exhibit}/>
         })}
@@ -63,7 +77,7 @@ export default function HomePage () {
           </a>
         </div>
       </div>
-      <div className="py-8 space-y-8 sm:py-10 sm:space-y-10">
+      <div className="space-y-8 sm:space-y-10">
         {[1, 2, 3, 4].map(item => {
           return <div key={item} className="w-full" style={{ background: 'linear-gradient(#101010, transparent 20% 80%, #101010)' }}>
             <Image
@@ -79,10 +93,10 @@ export default function HomePage () {
         })}
       </div>
       <div>
-        <div className="py-8 text-2xl font-black sm:text-3xl sm:py-10">
+        <div className="pb-4 text-2xl font-black sm:text-3xl">
           About Vermibus
         </div>
-        <div className="flex flex-col flex-wrap py-4 sm:flex-row sm:py-8">
+        <div className="flex flex-col flex-wrap sm:flex-row ">
           <div className="order-2 w-full space-y-8 sm:w-1/2 sm:order-1">
             <Image
               className="rounded-lg"
@@ -101,7 +115,7 @@ export default function HomePage () {
               </a>
             </div>
           </div>
-          <div className="order-1 w-full space-y-8 leading-tight sm:space-y-10 sm:w-1/2 sm:order-2 sm:pl-8">
+          <div className="order-1 w-full pb-8 space-y-8 leading-tight sm:w-1/2 sm:order-2 sm:pb-0 sm:pl-8">
             <div className="">
               The Berlin-based artist and activist Vermibus has developed a unique practice centered around the critique of contemporary beauty standards. He comments on the attempts of advertisement and consumer society in general that aim to take away individual identities only to replace them with those of a certain brand.
             </div>
@@ -111,14 +125,12 @@ export default function HomePage () {
             <div className="">
               Through this resignification, Vermibus humanizes the figures that were previously depersonalized as a means of launching a sharp social critique of the advertising industry and their practices on the human body.
             </div>
-            <div className="pt-4 space-y-8">
-              <div className="hidden md:block">
-                <a className="w-max" href="https://mega.nz/folder/DuxylbpS#CodtfRgdeO9PbgYKtH-n1g" target="_blank" rel="noreferrer">
-                  <Button large>
-                    Download the press kit
-                  </Button>
-                </a>
-              </div>
+            <div className="hidden md:block">
+              <a className="w-max" href="https://mega.nz/folder/DuxylbpS#CodtfRgdeO9PbgYKtH-n1g" target="_blank" rel="noreferrer">
+                <Button large>
+                  Download the press kit
+                </Button>
+              </a>
             </div>
           </div>
         </div>
