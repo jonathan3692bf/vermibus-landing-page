@@ -15,7 +15,7 @@ export default function HomePage () {
     <link rel="icon" href="/favicon.png" />
   </Head>
   <main>
-    <div className="relative max-w-screen-xl mx-auto mt-2" style={{ background: 'linear-gradient(#101010, transparent 20% 80%, #101010), linear-gradient(to right, #101010, transparent 20% 80%, #101010)' }}>
+    <div className="relative max-w-screen-xl mx-auto" style={{ background: 'linear-gradient(transparent 20% 80%, #101010), linear-gradient(to right, #101010, transparent 20% 80%, #101010)' }}>
       <Image
         priority
         className="absolute z-[-1]"
@@ -41,7 +41,7 @@ export default function HomePage () {
           The vision
         </div>
         <div className="">
-          By capturing the context of the intervention, Vermibus offers the viewer the opportunity to be part of that moment in space and time. Using the possibilities of 360° audiovisual technology paired with the blockchain, the artist documents his installations and offers them as NFT collections.
+          By capturing the context of the intervention, <a className="text-[#fdefa6] font-bold" href="https://vermibus.com/" target="_blank" rel="noreferrer">Vermibus</a> offers the viewer the opportunity to be part of that moment in space and time. Using the possibilities of 360° audiovisual technology paired with the blockchain, the artist documents his installations and offers them as NFT collections.
         </div>
         <div className="">
           In collaboration with Experience Designer <a href="https://www.linkedin.com/in/juancacardell/" className="text-[#fdefa6] font-bold" target="_blank" rel="noreferrer">Juanca Cardell</a>, this project has been conceptualized and developed to challenge the ephemerality of conventional urban interventions, allowing the viewer to experience Vermibus’ installations long after they are gone. This project represents an innovative attempt to solve one of the biggest problems when exhibiting street art - the lack of its original context.
@@ -69,11 +69,11 @@ export default function HomePage () {
             <Image
               className="absolute z-[-1] rounded"
               alt={`Example artwork - ${item}`}
-              src={`/images/example_${item}.png`}
+              src={`/images/example_${item}.jpg`}
               quality={90}
               layout="responsive"
-              width={6000}
-              height={3989}
+              width={5594}
+              height={3729}
             />
           </div>
         })}
@@ -84,24 +84,15 @@ export default function HomePage () {
         </div>
         <div className="flex flex-col flex-wrap py-4 sm:flex-row sm:py-8">
           <div className="order-2 w-full space-y-8 sm:w-1/2 sm:order-1">
-            <div style={{ background: 'linear-gradient(#101010, transparent 20% 80%, #101010)' }}>
-              <Image
-                className="absolute z-[-1] rounded"
-                alt="Vermibus"
-                src={'/images/vermibus.jpg'}
-                quality={90}
-                layout="responsive"
-                width={800}
-                height={1200}
-              />
-            </div>
-            <div className="md:hidden">
-              <a className="w-max" href="https://vermibus.com/" target="_blank" rel="noreferrer">
-                <Button large>
-                  Learn More
-                </Button>
-              </a>
-            </div>
+            <Image
+              className="rounded-lg"
+              alt="Vermibus"
+              src={'/images/vermibus.jpg'}
+              quality={90}
+              layout="responsive"
+              width={800}
+              height={1200}
+            />
             <div className="md:hidden">
               <a className="w-max" href="https://vermibus.com/" target="_blank" rel="noreferrer">
                 <Button large>
@@ -121,13 +112,6 @@ export default function HomePage () {
               Through this resignification, Vermibus humanizes the figures that were previously depersonalized as a means of launching a sharp social critique of the advertising industry and their practices on the human body.
             </div>
             <div className="pt-4 space-y-8">
-              <div className="hidden md:block">
-                <a className="w-max" href="https://vermibus.com/" target="_blank" rel="noreferrer">
-                  <Button large>
-                    Learn More
-                  </Button>
-                </a>
-              </div>
               <div className="hidden md:block">
                 <a className="w-max" href="https://vermibus.com/" target="_blank" rel="noreferrer">
                   <Button large>
