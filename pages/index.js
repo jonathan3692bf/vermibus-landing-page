@@ -35,7 +35,7 @@ export default function HomePage () {
         An ongoing series of documented urban interventions in which the artist emphasizes the context of his work through fully immersive 360 VR experiences.
       </h2>
     </div>
-    <div className="relative max-w-screen-lg px-4 mx-auto space-y-20 font-light sm:text-xl -top-8 sm:-top-16 md:-top-40">
+    <div className="relative max-w-screen-lg px-4 mx-auto space-y-16 font-light sm:space-y-20 sm:text-xl -top-8 sm:-top-16 md:-top-40">
       <div className="pt-20">
         <div className="pb-4 text-2xl font-black sm:text-3xl">
           The vision
