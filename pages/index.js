@@ -36,7 +36,7 @@ export default function HomePage () {
       </h2>
     </div>
     <div className="relative max-w-screen-lg px-4 mx-auto space-y-16 font-light sm:space-y-20 sm:text-xl -top-8 sm:-top-16 md:-top-40">
-      <div className="pt-20">
+      <div className="pt-16 sm:pt-20">
         <div className="pb-4 text-2xl font-black sm:text-3xl">
           The vision
         </div>
