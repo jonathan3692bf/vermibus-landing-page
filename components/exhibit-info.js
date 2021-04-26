@@ -43,7 +43,7 @@ export default function ExhibitInfo ({
   vrLink = '',
   artwork = []
 }) {
-  return <div className="space-y-4" key={location}>
+  return <div className="space-y-6" key={location}>
     <div className="flex items-end justify-between sm:justify-start sm:space-x-8">
       <div className="flex flex-col">
         <div className="text-2xl font-black leading-none sm:text-3xl">{location}</div>
@@ -82,7 +82,7 @@ export default function ExhibitInfo ({
       </div>
     </div>
     <div className="leading-tight">{description}</div>
-    <div className="grid gap-8 md:grid-cols-2">
+    <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
       {artwork.map((item, index) => {
         return <ArtworkCard key={index} {...item} location={location} index={index} totalPieces={artwork.length}/>
       })}

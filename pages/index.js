@@ -35,12 +35,12 @@ export default function HomePage () {
         An ongoing series of documented urban interventions in which the artist emphasizes the context of his work through fully immersive 360 VR experiences.
       </h2>
     </div>
-    <div className="relative max-w-screen-lg px-4 mx-auto space-y-16 font-light sm:text-xl -top-8 sm:-top-16 md:-top-40">
-      <div className="pt-16">
+    <div className="relative max-w-screen-lg px-4 mx-auto space-y-20 font-light sm:text-xl -top-8 sm:-top-16 md:-top-40">
+      <div className="pt-20">
         <div className="pb-4 text-2xl font-black sm:text-3xl">
           The vision
         </div>
-        <div className="space-y-8 leading-tight">
+        <div className="space-y-6 leading-tight">
           <div>
             By capturing the context of the intervention, <a className="text-[#fdefa6] font-bold" href="https://vermibus.com/" target="_blank" rel="noreferrer">Vermibus</a> offers the viewer the opportunity to be part of that moment in space and time. Using the possibilities of 360° audiovisual technology paired with the blockchain, the artist documents his installations and offers them as NFT collections.
           </div>
@@ -61,7 +61,7 @@ export default function HomePage () {
           </div>
         </div>
       </div>
-      <div className="space-y-8">
+      <div className="space-y-6">
         {exhibits.map((exhibit, index) => {
           return <ExhibitInfo key={index} {...exhibit}/>
         })}
@@ -77,7 +77,7 @@ export default function HomePage () {
           </a>
         </div>
       </div>
-      <div className="space-y-8 sm:space-y-10">
+      <div className="space-y-6">
         {[1, 2, 3, 4].map(item => {
           return <div key={item} className="w-full" style={{ background: 'linear-gradient(#101010, transparent 20% 80%, #101010)' }}>
             <Image
@@ -97,7 +97,7 @@ export default function HomePage () {
           About Vermibus
         </div>
         <div className="flex flex-col flex-wrap sm:flex-row ">
-          <div className="order-2 w-full space-y-8 sm:w-1/2 sm:order-1">
+          <div className="order-2 w-full space-y-6 sm:w-1/2 sm:order-1">
             <Image
               className="rounded-lg"
               alt="Vermibus"
@@ -115,7 +115,7 @@ export default function HomePage () {
               </a>
             </div>
           </div>
-          <div className="order-1 w-full pb-8 space-y-8 leading-tight sm:w-1/2 sm:order-2 sm:pb-0 sm:pl-8">
+          <div className="order-1 w-full pb-6 space-y-6 leading-tight sm:w-1/2 sm:order-2 sm:pb-0 sm:pl-8">
             <div className="">
               The Berlin-based artist and activist Vermibus has developed a unique practice centered around the critique of contemporary beauty standards. He comments on the attempts of advertisement and consumer society in general that aim to take away individual identities only to replace them with those of a certain brand.
             </div>
