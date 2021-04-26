@@ -94,7 +94,7 @@ export default function HomePage () {
               height={1200}
             />
             <div className="md:hidden">
-              <a className="w-max" href="https://vermibus.com/" target="_blank" rel="noreferrer">
+              <a className="w-max" href="https://mega.nz/folder/DuxylbpS#CodtfRgdeO9PbgYKtH-n1g" target="_blank" rel="noreferrer">
                 <Button large>
                   Download the press kit
                 </Button>
@@ -113,7 +113,7 @@ export default function HomePage () {
             </div>
             <div className="pt-4 space-y-8">
               <div className="hidden md:block">
-                <a className="w-max" href="https://vermibus.com/" target="_blank" rel="noreferrer">
+                <a className="w-max" href="https://mega.nz/folder/DuxylbpS#CodtfRgdeO9PbgYKtH-n1g" target="_blank" rel="noreferrer">
                   <Button large>
                     Download the press kit
                   </Button>
