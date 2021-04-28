@@ -12,6 +12,21 @@ export default function HomePage () {
   return <div className="">
   <Head>
     <title>VERMIBUS “IMMERSION”</title>
+    <meta name="description" content="An ongoing series of documented urban interventions in which the artist emphasizes the context of his work through fully immersive 360 VR experiences."/>
+
+    <meta property="og:url" content="https://vermibus-immersion.com"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://vermibus-immersion.com/images/og-image.jpg" key="image" />
+    <meta property="og:title" content="VERMIBUS “IMMERSION”"/>
+    <meta property="og:description" content="An ongoing series of documented urban interventions in which the artist emphasizes the context of his work through fully immersive 360 VR experiences."/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:domain" content="vermibus-immersion.com"/>
+    <meta property="twitter:url" content="https://vermibus-immersion.com"/>
+    <meta name="twitter:title" content="VERMIBUS “IMMERSION”"/>
+    <meta name="twitter:description" content="An ongoing series of documented urban interventions in which the artist emphasizes the context of his work through fully immersive 360 VR experiences."/>
+    <meta name="twitter:image" content="https://vermibus-immersion.com/images/og-image.jpg"/>
+
     <link rel="icon" href="/favicon.png" />
   </Head>
   <main>
