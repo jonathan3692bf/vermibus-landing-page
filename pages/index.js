@@ -35,11 +35,11 @@ export default function HomePage () {
         priority
         className="absolute z-[-1]"
         alt="VR headset recommended"
-        src="/images/vr_headset.jpg"
-        quality={80}
+        src="/images/top_background.jpg"
+        quality={100}
         layout="responsive"
-        width={4935}
-        height={3290}
+        width={1283}
+        height={855}
       />
     </div>
     <div className="relative max-w-screen-lg px-4 mx-auto -top-8 sm:-top-16 md:-top-40">
@@ -67,7 +67,7 @@ export default function HomePage () {
               priority
               className="absolute z-[-1]"
               alt='People walking by artwork'
-              src='/images/card_4_setting.jpg'
+              src='/images/collection_resized/heading.jpg'
               quality={90}
               layout="responsive"
               width={5905}
@@ -93,16 +93,16 @@ export default function HomePage () {
         </div>
       </div>
       <div className="space-y-6">
-        {[1, 2, 3, 4].map(item => {
-          return <div key={item} className="w-full" style={{ background: 'linear-gradient(#101010, transparent 20% 80%, #101010)' }}>
+        {exhibits[0].artwork.map(({ src, width, height }, index) => {
+          return <div key={index} className="w-full" style={{ background: 'linear-gradient(#101010, transparent 20% 80%, #101010)' }}>
             <Image
               className="absolute z-[-1] rounded"
-              alt={`Example artwork - ${item}`}
-              src={`/images/example_${item}.jpg`}
+              alt={`Artwork - ${index}`}
+              src={src}
               quality={90}
               layout="responsive"
-              width={5594}
-              height={3729}
+              width={width}
+              height={height}
             />
           </div>
         })}

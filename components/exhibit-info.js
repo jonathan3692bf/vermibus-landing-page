@@ -16,7 +16,7 @@ export function ArtworkCard ({
           className="absolute z-[-1] rounded"
           alt={`Artwork in ${location}, piece number ${index + 1}`}
           src={previewImage.src}
-          quality={90}
+          // quality={90}
           layout="responsive"
           width={previewImage.width}
           height={previewImage.height}
@@ -41,7 +41,7 @@ export default function ExhibitInfo ({
   description = '',
   dates = [],
   vrLink = '',
-  artwork = []
+  previews = []
 }) {
   return <div className="space-y-6" key={location}>
     <div className="flex items-end justify-between sm:justify-start sm:space-x-8">
@@ -83,8 +83,8 @@ export default function ExhibitInfo ({
     </div>
     <div className="leading-tight">{description}</div>
     <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
-      {artwork.map((item, index) => {
-        return <ArtworkCard key={index} {...item} location={location} index={index} totalPieces={artwork.length}/>
+      {previews.map((item, index) => {
+        return <ArtworkCard key={index} {...item} location={location} index={index} totalPieces={previews.length}/>
       })}
     </div>
   </div>
